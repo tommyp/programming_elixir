@@ -10,4 +10,7 @@ defmodule MyList do
 
   def map([], _func), do: []
   def map([ head | tail ], func), do: [ func.(head) | map(tail, func) ]
+
+  def sum([], total), do: total
+  def sum([ head | tail ], total), do: sum(tail, head+total)
 end
